@@ -1,12 +1,9 @@
-//Swup - ajax init
-const swup = new Swup();
-
 //Slick slider config
 $(document).ready(function () {
-  $(".facts__slider").slick({
+  $(".projects__slider").slick({
     arrows: true,
     adaptiveHeight: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     speed: 1000,
     autoplay: true,
@@ -28,10 +25,10 @@ $(document).ready(function () {
 
 document.addEventListener("swup:contentReplaced", (event) => {
   $(document).ready(function () {
-    $(".facts__slider").slick({
+    $(".projects__slider").slick({
       arrows: true,
       adaptiveHeight: true,
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
       speed: 1000,
       autoplay: true,
@@ -51,5 +48,3 @@ document.addEventListener("swup:contentReplaced", (event) => {
     });
   });
 });
-
-new WOW().init();
