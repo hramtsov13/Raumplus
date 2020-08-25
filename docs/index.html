@@ -14,32 +14,35 @@
         <div class="col-1">
           <h1 class="header__title">Дизайн. Отделка. Мебель<span class="accent__label"></span></h1>
         </div>
-        <div class="col-8 text-sm-left text-md-right m-auto">
+        <div class="col-5 col-md-8 text-right m-auto">
           <p class="header__address">г. Челябинск, ул. Сони Кривой, д. 83</p>
         </div>
-        <div class="col-2">
-          <p class="header__phone">
-            Позвоните нам: <br />
+        <div class="col-5 col-md-2">
+          <div class="header__phone">
+            <div>Позвоните нам:</div>
             <a href="tel:+7(351)235-65-94">+7 (351) 235-65-94</a>
-          </p>
+          </div>
         </div>
-        <div class="col-1">
-          <div class="header__burger"><span></span></div>
+        <div class="col-1 col-md-1">
+          <div class="header__burger">
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
     </header>
 
-    <section class="container">
-      <div class="main">
+    <section class="main">
+      <div class="container">
         <div class="row">
-          <div class="col-8">
+          <div class="col-12 col-md-8">
             <div class="slider__image">
-              <img src="./../img/main/slider-img.jpg" alt="Мебель" />
+              <img src="./../img/main/slider-img.png" alt="Мебель" />
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-11 col-md-3">
             <div class="row">
-              <div class="col-9">
+              <div class="col-12 col-md-9">
                 <p class="main__description">Жизнь полна идей</p>
                 <p class="main__description">как и наша мебель</p>
               </div>
@@ -62,68 +65,131 @@
       </div>
     </section>
 
-    <section class="container">
-      <div class="row">
-        <div class="pricing">
-          <div class="col-6">
-            <div class="row">
-              <div class="col-8">
-                <h2 class="pricing__header">
-                  Расчитаем стоимость за 30 минут
-                </h2>
+    <section class="pricing">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="pricing__offer">
+              <h2 class="pricing__header">Расчитаем стоимость за 30 минут</h2>
+              <form class="pricing__form">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form__item">
+                      <label for="name">Введите ваше имя</label>
+                      <input class="form__input" type="text" name="name" id="name" pattern="[A-Za-zА-Яа-яЁё]" required />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form__item">
+                      <label for="email">Введите ваш e mail</label>
+                      <input class="form__input" type="email" name="email" id="email" required />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form__item">
+                      <label for="phone">Введите ваш номер телефона</label>
+                      <input class="form__input" type="tel" name="phone" id="phone" pattern="^[ 0-9]+$" />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form__item">
+                      <button class="form__attachment-button">Прикрепить файлы</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form__item">
+                      <label class="checkbox"
+                        ><input class="form__item checkbox__input" type="checkbox" name="checkbox" required />
+                        <span class="checkbox__fake"></span>
+                        <span class="checkbox__agreement">
+                          Я согласен с условиями обработки и&nbsp;использования персональных данных</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form__item">
+                      <button class="button pricing__button">Получить расчет</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-5 offset-sm-1">
+            <div class="pricing__image">
+              <div class="image__offer">
+                Вы <br />
+                получите <br />
+                примерный <br />
+                расчет
+              </div>
+              <div class="image__description">
+                Оператор перезвонит вам для более подробной консультации.
+                <br />
+                <br />
+                Мы не рассылаем спам, только персональные предложения
               </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <form class="pricing__form">
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="form__item">
-                        <label for="name">Введите ваше имя</label>
-                        <input class="form__input" type="text" name="Name" pattern="[A-Za-zА-Яа-яЁё]" required />
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form__item">
-                        <label for="email">Введите ваш e mail</label>
-                        <input class="form__input" type="email" name="email" required />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="form__item">
-                        <label for="phone">Введите ваш номер телефона</label>
-                        <input class="form__input" type="tel" name="phone" pattern="^[ 0-9]+$" />
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form__item">
-                        <div>
-                          <button class="button form__button">Прикрепить файлы</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="form__item">
-                        <label class="checkbox"
-                          ><input class="form__input checkbox__input" type="checkbox" name="checkbox" required />
-                          <span class="checkbox__fake"></span>
-                          <span class="checkbox__agreement">
-                            Я согласен с условиями обработки и использования персональных данных</span
-                          >
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form__item">
-                        <button class="button">Получить расчет</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="projects" id="projects">
+            <h2 class="col-3 header">Посмотрите на наши проекты</h2>
+            <div class="projects__nav">
+              <span class="slider__arrow"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="projects__slider">
+            <div class="slider__item">
+              <img class="slider__image" data-lazy="./img/projects/slider-cab.jpg" alt="Кабинеты и библиотеки" />
+              <div class="description">
+                <h3>
+                  Кабинеты <br />
+                  и&nbsp;библиотеки
+                </h3>
+                <p>Для жилых и общественных помещений</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" data-lazy="./img/projects/slider-kitchen.jpg" alt="Мебель для кухни" />
+              <div class="description">
+                <h3>
+                  Мебель <br />
+                  для кухни
+                </h3>
+                <p>Современные комплектующие</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" data-lazy="./img/projects/slider-kitchen.jpg" alt="Детские и подростковые комнаты" />
+              <div class="description">
+                <h3>Детские и подростковые комнаты</h3>
+                <p>Из экологически чистых материалов</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" data-lazy="./img/projects/slider-cab.jpg" alt="Кабинеты и библиотеки" />
+              <div class="description">
+                <h3>
+                  Кабинеты <br />
+                  и&nbsp;библиотеки
+                </h3>
+                <p>Для жилых и общественных помещений</p>
               </div>
             </div>
           </div>

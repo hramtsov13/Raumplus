@@ -73,7 +73,7 @@ body {
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
-  position: relative;
+  text-align: center;
   position: relative;
 }
 
@@ -376,6 +376,28 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 124px;
+
+  & .header {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 50px;
+    color: #0E0A19;
+    position: relative;
+  }
+
+  .header::after {
+    content: "";
+    position: absolute;
+    background: url("./../img/accent-label/label.svg") no-repeat;
+    background-size: 100% 100%;
+    right: 12px;
+    bottom: 8px;
+    width: 59px;
+    height: 22px;
+  }
 }
 
 .projects__slider {
@@ -392,42 +414,51 @@ body {
   align-items: flex-start;
 }
 
+.projects__nav {
+  display: flex;
+  align-items: center;
+  padding: 27px 25px;
+  margin-right: 10px;
+  background-color: #FF3B3D;
+}
+
 .slider__arrow .slick-arrow {
-  vertical-align: top;
-  line-height: 56px;
   font-size: 0px;
-  width: 56px;
-  height: 56px;
-  z-index: 14;
+  width: 36px;
+  height: 22px;
   border: none;
   cursor: pointer;
 
   &:hover {
+
     transition: 0.6s;
     transform: scale(1.1);
   }
 }
 
 .slider__arrow .slick-arrow.slick-prev {
-  background: url("./../img/pricing-form/arrow.svg") 0 0 no-repeat;
+  margin-right: 50px;
+  background: url("./../img/projects/arrow-prev.svg") 0 0 no-repeat;
   background-size: contain;
   outline: none;
+  background-color: #FF3B3D;
 }
 
 .slider__arrow .slick-arrow.slick-next {
-  background: url("./../img/pricing-form/arrow.svg") 0 0 no-repeat;
+  background: url("./../img/projects/arrow-next.svg") 0 0 no-repeat;
   background-size: contain;
   outline: none;
+  background-color: #FF3B3D;
 }
 
 .slider__item {
-  position: relative;
   margin-right: 10px;
   overflow: hidden;
   outline: none;
 }
 
 .description {
+  padding-left: 29px;
   margin-top: 23px;
   text-align: left;
   color: #000;
@@ -446,6 +477,23 @@ body {
 }
 
 .slider__image {
-  border-radius: 10px;
   width: 100%;
+}
+
+@media (max-width: 767.98px) {
+
+  .header::after {
+    content: "";
+    position: absolute;
+    background: url("./../img/accent-label/label.svg") no-repeat;
+    background-size: 100% 100%;
+    right: 0px;
+    bottom: 0px;
+    width: 59px;
+    height: 22px;
+  }
+
+  .header__address {
+    margin-left: 20px;
+  }
 }
